@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.inactive{
+    display: none;
+}
+
+img{
+    margin: 0px auto;
+    display: block;
+    width: 100%;
+    max-width: 380px;
+}
+
+div{
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+input{
+    padding: 10px 20px;
+    border: none;
+    width: 80%;
+    display: block;
+    margin: 20px auto 30px;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-shadow: 1px 1px 4px black;
+    transition: transform .30s ease-in-out;
+}
+
+input:focus-within{
+    background-color: rgb(42, 43, 43);
+    transform: scale(1.1);
+}
+
+button{
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+span{
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    color: red;
+    font-size: 2rem;
+    padding: 20px;
+    width: 100%;
+}
