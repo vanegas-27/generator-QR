@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 .inactive{
     display: none;
 }
@@ -35,7 +36,7 @@ input{
 }
 
 input:focus-within{
-    background-color: rgb(42, 43, 43);
+    background-color: rgb(183, 189, 189);
     transform: scale(1.1);
 }
 
@@ -52,8 +53,8 @@ span{
     display: block;
     margin: 10px auto;
     text-align: center;
-    color: red;
-    font-size: 2rem;
+    color: #ff0000;
+    font-size: 2.5rem;
     padding: 20px;
     width: 100%;
 }
