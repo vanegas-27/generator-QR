@@ -8,7 +8,7 @@ function generar(span,url){
     span.textContent = "";
     generatosQr(span,url);
 
-    document.getElementById('descargarPDF').classList.remove('inactive');
+    document.getElementById('descargarqr').classList.remove('inactive');
 
 }
 
@@ -24,11 +24,15 @@ btn.addEventListener('click', (event) => {
 })
 
 
-document.getElementById('descargarPDF').addEventListener('click', function() {
-
+  document.getElementById('descargarqr').addEventListener('click', function() {
     const contenido = document.getElementById('contenido'); // Obtener el contenido a convertir
 
-    html2pdf()
-      .from(contenido)
-      .save(`QR_${new Date()}.pdf`); // Nombre del archivo PDF a descargar
-  });
+    html2canvas(contenido).then(canvas => {
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = `QR_${new Date().toISOString()}.png`;
+        link.click();
+    });
+
+
+});
